@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding:0;
+            background-color: #f0f0f0;
+            background-image: url(web7.jpg);
+            background-size:cover;
+            height:800px ;
+            width:auto;
+        }
+
+        .header {
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f0f0f0;
+        }
+
+        nav {
+            
+            padding: 10px;
+            text-align: right;
+        }
+
+        nav a {
+            color:rgb(253, 249, 249);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            padding: 20px;
+            margin-top: 20px;
+            background-image: url(web3.jpg);
+            border-radius: 5px;
+        }
+
+        .text-container {
+            text-align: center;
+            color:white;
+        }
+
+        .dynamic-text {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff7f0e; /* Orange */
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333; /* Dark gray */
+            color: #fff;
+            font-size: 24px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: #666; /* Medium gray */
+        }
+
+        .profile-image {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .contact-button {
+            background-color: #feffff; /* Dark gray */
+            color:black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 0 auto;
+            
+        }
+
+        .contact-button:hover {
+            background-color:#ff7f0e; /* Medium gray */
+            
+        }
+
+        .about-section {
+            margin-top:150px;
+            padding: 20px;
+            background-color: #f0f0f0; /* Light gray */
+            border-radius: 10px;
+            background-image: url(web5.jpg.webp);
+            background-size: cover;
+        }
+
+        .about-text {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="venkatesh-2.png" alt="Web Developer Logo" class="logo">
+            <div class="name">VENKATESH PITLA</div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="text-container">
+                <h1>Hello, it's Venaktesh Pitla</h1>
+                <div id="dynamicText" class="dynamic-text">Web Developer</div>
+            </div>
+            <div class="social-icons">
+                <a  src="logo-1.png" href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-github"></a>
+                <a href="#" class="fa fa-whatsapp"></a>
+            </div>
+        </div>
+        <img src="profile.jpg" alt="Profile Picture" class="profile-image">
+        <a style="text-decoration: none;" href="contact.html"><button class="contact-button">Contact Me<b>you can also contact with 7981619641</b></button></a>
+    </div>
+
+    <div class="about-section container">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I'm a passionate web developer with expertise in front-end and back-end technologies. I love creating innovative and user-friendly web applications.</p>
+        </div>
+        <img src="about.jpeg" alt="About Image" class="about-image">
+    </div>
+
+    <script>
+        var dynamicTexts = ["Web Developer", "Web Designer", "Hard Worker","Data analystic"];
+        var currentIndex = 0;
+
+        function changeDynamicText() {
+            document.getElementById('dynamicText').textContent = dynamicTexts[currentIndex];
+            currentIndex = (currentIndex + 3) % dynamicTexts.length;
+        }
+
+        setInterval(changeDynamicText, 1000);
+    </script>
+</body>
+</html>

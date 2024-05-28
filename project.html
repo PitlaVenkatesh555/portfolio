@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo-container">
+                <img src="venkatesh-2.png" alt="Web Developer Logo" class="logo">
+                <div class="name">VENKATESH PITLA</div>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div id="projects-container"></div>
+        </section>
+
+        <!-- Other sections of your webpage -->
+    </main>
+
+    <footer>
+        <!-- Your existing footer content -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const projects = [
+                {
+                    title: 'SANDADI',
+                    description: 'This project is based on my idea which deal with booking event attributes like dj sounds,decor,dancers,etc...',
+                    link: 'https://pitlavenkatesh555.github.io/html/'
+                },
+                {
+                    title: 'vekatesh-webs',
+                    description: 'its is a task that given by skillveters',
+                    link: 'https://pitlavenkatesh555.github.io/Venkatesh-tech/'
+                },
+                {
+                    title: 'adding tasks',
+                    description: 'created with html and css js.it is just adding tasks and deleting with in the page',
+                    link: 'https://pitlavenkatesh555.github.io/add-task/'
+                },
+                {
+                    title: 'calculator',
+                    description: 'its is a mathametical calculator cretaed with html and css, js.',
+                    link: 'https://pitlavenkatesh555.github.io/calculator/'
+                },
+                {
+                    title: 'login page',
+                    description: 'created a login page by using html ,css and javascript',
+                    link: 'https://pitlavenkatesh555.github.io/login-register-pages/'
+                },
+                {
+                    title: 'Bio',
+                    description: 'created a bio of allu arjun sir by using html and css, javascript',
+                    link: 'https://pitlavenkatesh555.github.io/bio/'
+                },
+                // Add more projects as needed
+            ];
+
+            const projectsContainer = document.getElementById('projects-container');
+
+            projects.forEach(project => {
+                const projectDiv = document.createElement('div');
+                projectDiv.className = 'project';
+
+                const projectTitle = document.createElement('h3');
+                projectTitle.textContent = project.title;
+                projectDiv.appendChild(projectTitle);
+
+                const projectDescription = document.createElement('p');
+                projectDescription.textContent = project.description;
+                projectDiv.appendChild(projectDescription);
+
+                const projectLink = document.createElement('a');
+                projectLink.href = project.link;
+                projectLink.textContent = 'View Project';
+                projectLink.target = '_blank';
+                projectDiv.appendChild(projectLink);
+
+                projectsContainer.appendChild(projectDiv);
+            });
+        });
+    </script>
+</body>
+</html>
